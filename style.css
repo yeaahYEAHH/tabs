@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
  
+
+/* тело */
 body {
     margin: 0;
     padding: 0;
     font-family: Roboto, sans-serif;
-    background-color: rgba(197, 197, 55, .3);
+    background-color: rgba(197, 197, 55, .4);
 
 }
+
+
 .dws-wrapper {
     position: absolute;
     top: 50%;
@@ -14,18 +18,24 @@ body {
     transform: translate(-50%, -50%);
 }
 
+
 .dws-form {
     background: rgba(255, 255, 255, 0.8);
     padding: 10px; 
-    width: 330px;
+    width: 400px;
     border-radius: 10px;
 }
+
+/* содержимое формы */
 .dws-form a {
     text-decoration: none;
     transition: 0.5s;
     color: #298cad;
 }
+
 .dws-form a:hover {
+    border-radius: 10px;
+    padding: 10px;
     color: #36d2ff;
     background-color: #1b5f75;
 }
@@ -40,22 +50,18 @@ body {
     width: 100%;
 }
 
-.del {
-    display: none;
-}
-
 .tab-form { 
-
     padding: 30px  20px 20px;
     display: none;
 }
     
 .tab-form.active {
     display: block;
+    background-color: rgba(197, 197, 55, .1);
 } 
 
+/* вкладки */
 label.tab {
-    outline: 1px solid orange;
     color: #298cad;
     font-weight: 600;
     padding: 15px;
@@ -63,16 +69,23 @@ label.tab {
     border-radius: 3px 3px 0 0;
     margin-bottom: -1px;
     cursor: pointer;
+    margin-bottom: 0px;
+    transition: .3s;
 }
 
 label.tab:hover{
+    border-radius: 10px;
+    padding: 20px;
     background-color: rgba(197, 197, 55, .3);
-}
-   
-label.tab.active {
-    background: #fff;
     color: #1b5f75;
 }
+   
+label.tab.activate {
+    background: rgba(197, 197, 55, .1);
+    border-radius: 5px;
+}
+
+
    
 .input {
     font-size: 16px;
@@ -103,7 +116,6 @@ a.button {
 }
 
 .social a {
-    outline: 1px solid orange;
     width: 40px;
     height: 40px;
     display: block;
@@ -118,5 +130,11 @@ a.button {
     text-align: center;
 }
    
+.recover{
+    display: flex;
+}
 
-   
+.recover input{
+    width: 16px;
+    margin-right: 30px;
+}
